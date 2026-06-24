@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id        String    @id @default(cuid())
+  name      String?
+  email     String?   @unique
+  image     String?
+  bookings  Booking[]
+  chats     ChatMessage[]
+}
+
+model Booking {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  flightNumber  String
+  origin        String
+  destination   String
+  departureTime String
+  price         Float
+  status        String   @default("CONFIRMED") // CONFIRMED, CANCELLED
+  createdAt     DateTime @default(now())
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  content   String
+  isAgent   Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
