@@ -1,17 +1,17 @@
-# Lumina Flights - Premium 3D Online Travel Agency
+# Lumina Flights - 3D Immersive OTA
 
-A stunning, immersive 3D flight booking platform built with Next.js, React Three Fiber, and modern web technologies.
-
-## Quick Start
-
-1. Clone the repo
-2. `npm install`
-3. `npm run dev`
+## Live Demo
+Visit the deployed site or run locally.
 
 ## Features
-- Dark cosmic theme
-- 3D globe hero
-- Flight search form
-- Responsive design
+- Beautiful dark cosmic design matching client screenshot
+- Animated 3D globe hero with flight paths
+- Professional flight search form
+- Smooth animations
+- Ready for full 3D (R3F), API integration, and booking flow
 
-More to come...
+## Installation
+1. `npm install`
+2. `npm run dev`
+
+This is a strong prototype to win the bid.
